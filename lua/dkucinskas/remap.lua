@@ -25,6 +25,11 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
+-- debuger added -dk
+-- vim.keymap.set('n', '<leader>db', function()
+--     require('dap').continue()
+-- end)
+
 --[[
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -75,4 +80,3 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 --]]
-

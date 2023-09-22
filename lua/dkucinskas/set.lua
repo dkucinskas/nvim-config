@@ -52,6 +52,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+
+vim.opt.colorcolumn = "80"
 -- dk added end
 
 -- Enable mouse mode
@@ -85,3 +87,4 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
