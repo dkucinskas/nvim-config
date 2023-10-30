@@ -88,3 +88,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- set list to see whitespaces
+vim.o.listchars=eol:¬,tab:»·,trail:~,extends:⟩,precedes:⟨,space:␣
+
