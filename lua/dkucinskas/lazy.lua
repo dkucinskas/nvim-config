@@ -76,11 +76,22 @@ require('lazy').setup({
   --   end,
   -- },
   { -- gruvbox theme
-    'morhetz/gruvbox',
+    -- 'navarasu/onedark.nvim',
+    -- 'morhetz/gruvbox',
+    'rose-pine/neovim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'gruvbox'
+      require('rose-pine').setup({
+        variant = 'moon'
+      })
+      -- vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'rose-pine'
+      vim.opt.background = 'light'
     end,
+    -- opts = {
+    --   variant = 'moon'
+    -- },
   },
 
   { -- Set lualine as statusline
@@ -89,7 +100,8 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox',
+        theme = 'rose-pine',
+        -- theme = 'gruvbox',
         -- theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -101,9 +113,11 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = "ibl",
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+      indent = { char = '┊' },
+      whitespace = { remove_blankline_trail = false, }
+      -- show_trailing_blankline_indent = false,
     },
   },
 
