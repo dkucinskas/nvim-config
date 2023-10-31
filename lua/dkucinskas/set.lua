@@ -89,5 +89,13 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- set list to see whitespaces
-vim.o.listchars=eol:¬,tab:»·,trail:~,extends:⟩,precedes:⟨,space:␣
+vim.opt.listchars = {
+    eol = '↵',
+    tab = ' →',
+    trail = '~',
+    extends = '»',
+    precedes = '«',
+    space = '·'
+}
+vim.opt.list = true
 
